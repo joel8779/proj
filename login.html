@@ -1,0 +1,292 @@
+<html>
+
+<head>
+    <script>
+        function startTime() {
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+            setTimeout(startTime, 1000);
+        }
+
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };
+            return i;
+        }
+        function validate() {
+            var a;
+            a = document.getElementById("uname").value
+            if (a =="") {
+                alert("User name cannot be empty!!");
+                return 0;
+            }
+            var b;
+            b = document.getElementById("pass").value
+            if (b =="") {
+                alert("Password could not be empty!!");
+                return 0;
+            }
+            var c;
+            c = document.getElementById("cpass").value
+            if (b != c) {
+                alert("passwords should be same!!");
+                return 0;
+            }
+            alert("Successfully Registered!!")
+            window.location.reload();
+        }
+    </script>
+    <style>
+        .tab {
+            background-image: url('https://www.91-cdn.com/hub/wp-content/uploads/2022/01/Grocery-store-near-me.jpg');
+            background-size: 100%;
+
+        }
+
+        .frame {
+            width: 290px;
+            height: 350px;
+            border: 1px solid black;
+            background-color: yellow;
+            border-radius: 10px;
+            margin-top: 12%;
+            margin-left: 38.5%;
+            padding: 10px;
+            position: fixed;
+        }
+
+        .signin {
+            width: 288.5px;
+            height: 50px;
+            border: 1px solid black;
+            box-shadow: 20px;
+            background-color: rgb(252, 252, 110);
+            border-radius: 5px;
+        }
+#signin{
+    text-align: center;
+}
+        .user {
+            width: 250px;
+            margin-left: 20px;
+        }
+
+        #user {
+            margin-left: 20px;
+            margin-top: 100px;
+        }
+
+        .sub {
+            margin-left: 20px;
+            border-radius: 4px;
+            border: 1px solid rgb(248, 214, 21);
+            background-color: rgb(248, 214, 21);
+            color: black;
+            box-shadow: 40px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serifS;
+        }
+
+        .pass {
+            width: 250px;
+            margin-left: 20px;
+        }
+
+        .word {
+            width: 250px;
+            margin-left: 20px;
+        }
+
+        .logos {
+            width: 750px;
+            height: 370px;
+            margin-left: 360px;
+            margin-top: 200px;
+            position: fixed;
+        }
+
+        .navbar {
+            background-color: yellow;
+            padding: 5px;
+            display: flex;
+            position: sticky;
+            float: none;
+        }
+
+        .link {
+            border: 1px solid yellow;
+            width: 390px;
+            text-align: center;
+
+        }
+
+        .links {
+            text-decoration: none;
+            color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .logo {
+
+            width: 80px;
+            height: 50px;
+
+        }
+
+        .dropbtn {
+
+            background-color: yellow;
+            color: black;
+            width: 250px;
+            height: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: yellow;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            margin-left: 45px;
+        }
+
+        .dropdown-content p {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content p:hover {
+            background-color: rgb(245, 226, 57);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: yellow;
+        }
+        .us{
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px 5px  black ;
+    background-color:white ;
+}
+.imge{
+    border-radius: 125px;
+    width: 80px;
+    height: 80px;
+    border: 1px solid white;
+    margin-top: 20px;
+    margin-left: 10px;
+    box-shadow: 2px 2px 2px 2px  black ;
+}
+.cont{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 23px;
+}
+.call{
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+.media{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif ;
+    font-size: 16px;
+}
+
+.insta{
+    border-radius: 125px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    margin-top: 20px;
+    margin-right: 20px;
+    box-shadow: 2px 2px 2px 2px  black ;
+}
+    </style>
+
+</head>
+<div class="card">
+
+    <body class="tab" onload="startTime()">
+        <div class="navbar">
+            <image class="logo" src="logo.jpeg"></image>
+            <div class="link">
+                <btn type="button"><button class="dropbtn"><a class="links" href="index.html">🏠HOME</a></btn></button>
+            </div>
+            <div class="link">
+                <div class="dropdown">
+                    <button class="dropbtn">CONTACTS</button>
+                    <div class="dropdown-content">
+                        <div class="us">
+                            <div><image class="imge"src="logo.jpeg"></image></div>
+                            <br><br>
+                            <div class="cont"><U>CONTACT US</U></div>
+                            <br>
+                            <div class="call">PHN NO: 9398000365</div>
+                            <div class="media"><table style="margin-left: 60px;"><tr><td><a href="https://www.instagram.com/"><image class="insta"src="insta.jpg"></image></a></td><td><a href="https://www.facebook.com/"><image class="insta"src="Facebook.png"></image></a></td><td><a href="https://www.whatsapp.com/"><image class="insta"src="whatsapp.png"></image></a></td><td><a href="https://twitter.com/?lang=en"><image class="insta"src="twitter.jpg"></image></a></td></tr></table></div>
+                            <br>
+                            <div class="call">EMAIL: market@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="link">
+                <btn type="button"><button class="dropbtn"><a class="links" href="projec.html">ADDRESS</a></btn>
+                </button>
+            </div>
+            <div class="link">
+                <btn type="button"><button class="dropbtn">
+                        <div id="txt"></div>
+                </btn></button>
+            </div>
+        </div>
+        <div>
+            <image class="logos" src="Picsart_23-02-22_18-51-37-569.png"></image>
+            <div class="frame">
+                <div class="signin">
+                    <p id="signin">SIGN IN</p>
+                </div>
+                <br>
+                <br>
+                <label id="user">Username:</label>
+                <input id="uname" class="user" type="text" />
+                <br>
+                <br>
+                <label id="user">Password:</label>
+                <input id="pass" class="pass" type="Password" />
+                <br>
+                <br>
+                <label id="user">Confirm-Password:</label>
+                <input id="cpass" class="word" type="Password" />
+                <br>
+                <br>
+                <label id="user" required="">Enter your email:</label>
+                <input class="user" type="email" />
+                <br>
+                <br>
+                <input type="submit" value="SUBMIT" onclick="validate()" class="sub" />
+            </div>
+    </body>
+
+</html>
